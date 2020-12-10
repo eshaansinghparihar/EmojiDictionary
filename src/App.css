@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  margin:3rem;
+}
+
+.input{
+  display: inline;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
 }
 
 .App-logo {

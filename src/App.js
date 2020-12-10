@@ -23,6 +23,7 @@ function App() {
   const [emoji,setEmoji]=useState("");
 
   function emojiClickHandler(emojiClicked){
+    setEmoji(emojiClicked)
     setMeaning(emojiDictionary[emojiClicked])
   }
 
@@ -42,16 +43,18 @@ function App() {
   return (
     <div className="App">
       <h1>Emoji Dictionary</h1>
+      <div className="App">
       <input
+        className="input"
         onChange={emojiInputHandler}
         value={emoji}
         placeholder={" Search your emoji here "}
         style={{
           padding: "1em",
-          minWidth: "80%",
-          margin: "1em",
+          // minWidth: "90%",
         }} 
       />
+      </div>
       {
         emojis.map(emoji=>(
           <span
